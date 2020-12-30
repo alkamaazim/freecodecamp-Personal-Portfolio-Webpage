@@ -1,0 +1,267 @@
+/* VARIABLES */
+:root{
+    --primary-color: rgba(236, 107, 129);
+    --secondary-color: #066;
+}
+/* CSS RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.54;
+    text-align: center;
+}
+
+img{
+    width: 100%;
+}
+
+/* UTILITY CLASSES */
+.container{
+    max-width: 1200px;
+    padding: 0 1.5rem;
+    margin: auto;
+    overflow: hidden;
+}
+
+.btn{
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 1rem;
+    text-align: center;
+    display: inline-block;
+    padding: .6rem 1.5rem;
+    border-radius: 2px;
+    background-color: #333;
+    transition: all .5s ease-in-out;
+}
+
+.btn:hover{
+    background-color: var(--primary-color);
+}
+
+/* ABOUT PAGE */
+#about{
+   height: 100vh;
+   background-color: #333;
+}
+
+#navbar{
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0rem 3rem;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    width: 100vw;
+}
+
+#navbar ul{
+    list-style: none;
+    display: flex;
+}
+
+#navbar ul a{
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    padding: 1.2rem 2rem;
+    display: inline-block;
+    font-weight: 500;
+}
+
+#navbar ul a:hover{
+    background-color: grey;
+}
+
+#about .container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#title{
+    color: #fff;
+    font-size: 3.5rem;
+    font-weight: bolder;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.lead{
+    font-size: 1.9rem;
+    color: #eee;
+    font-weight: 200;
+    color: var(--primary-color);
+}
+
+#work{
+    text-align: center;
+    width: 100%;
+    padding: 6rem .1rem;
+    background-color: var(--secondary-color);
+}
+
+#work .projects{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 3rem;
+    grid-column-gap: 2rem;
+    margin-top: 2rem;
+}
+
+#work .container > h1{
+    font-size: 2.6rem;
+    color: #fff;
+    font-weight: bolder;
+    text-transform: capitalize;
+    margin-bottom: .6rem;
+    line-height: 1.2;
+}
+
+/* #bottom-line{
+    height: 3px;
+    background-color: #fff;
+    width: 55%;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+    margin-bottom: 3rem;
+} */
+
+#work .projects .box{
+    background-color: #eee;
+    border: 5px solid #eee;
+    border-radius: 3px;
+}
+
+#work .projects .box a{
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#work .projects .box a p{
+    padding: .5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    color: #333;
+}
+
+.code{
+    color: #eee;
+    transition: .5s all ease;
+    font-size: 1.4rem;
+}
+
+#work .projects .box:hover .code{
+    color: orangered;
+}
+
+/* CONTACT SECTION */
+#contact{
+    height: 80vh;
+    background-color: #444;
+    color: #fff;
+}
+
+#contact .container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+#contact .container h1{
+    font-size: 3.4rem;
+    font-weight: bolder;
+    padding-bottom: 0rem;
+}
+
+#contact .container p{
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+}
+
+#contact .container .social > a{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #eee;
+    margin: 1rem 2rem;
+    font-weight: bolder;
+    transition: transform .5s;
+}
+
+#contact .container .social > a:hover{
+    transform: translateY(-5px);
+}
+
+/* FOOTER */
+#main-footer{
+    border-top: solid 4px var(--primary-color);
+    padding: 1rem;
+    background-color: #444;
+    color: #fff;
+}
+
+#main-footer .container{
+    padding: 1rem 0rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#main-footer .container p{
+    font-size: 1.2rem;
+}
+
+#main-footer #creator a{
+    text-decoration: none;
+    color: #eee;
+}
+
+/* SMARTPHONE */
+@media (max-width: 600px){
+    #navbar{
+        padding: 0rem 1rem;
+        justify-content: center;
+    }
+
+    #work .projects{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #contact .container p{
+        margin-bottom: 1.5rem;
+    }
+
+    #contact .container .social > a{
+        display: block;
+        margin: 1rem 1.5rem;
+    }
+
+    #main-footer .container{
+        flex-direction: column;
+    }
+
+    #main-footer #creator{
+        margin-top: 1rem;
+    }
+}
+
+
+
+
